@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'my_app/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Add a Casting Topic</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="topper">        
+            <div id="credentials">
+                <p id="top-cred">Logged in as, <a href="/myaccount/{{user.id}}"><u><b>{{user.user_name}}</b></u></a> <a id="logout" href='/logout'> <b>| logout</b></a></p>
+            </div>
+        
+            <div id="log-cent">
+                        
+                <image id="vidcam" src="{% static 'my_app/video-camera.svg' %}" alt="#"></image>
+                <div id="logo">
+                    <h1 id="fc"><a href="/main">FanCast!</a></h1>
+                    <br>
+                    <p>A place to cast any character imagineable!</p>             
+                </div>
+                                    
+            </div>
+                    
+        </div>
+
+
+
+        <h1>Add a Casting Topic!</h1>
+        <p>Submit a character below to open up theoretical audtion polling!</p>
+        <br>
+        <div id="topic_form">
+            <form enctype="multipart/form-data" action="/adder" method="post">
+                {% csrf_token %}
+                <p>Character Name: <input type="text" name="name"></p>
+                <p>Genre: <select name="genre">
+                    <option value="comics">Comics</option>
+                    <option value="video_games">Video Games</option>
+                    <option value="books">Books</option>
+                    <option value="historical_figure">Historical Figure</option>
+                </select></p>
+                <p>Character Topic Image:<input type="file" name="image"  accept="image/*"></p>
+                
+                <input type="submit" value="Post!">
+            </form>
+        </div>
+        <div id="alert">
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>    
+    </div>
+
+<!-- ~~JS~~ -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+</body>
+</html>

@@ -1,0 +1,242 @@
+/*CSS reset settings here*/
+* { outline: 1px dotted red; }
+*{
+    margin: 0px;
+    padding: 0px;
+   }
+@media only screen and (max-width: 480px){
+    #comicCarousel{
+        display: block;
+        width: 80%;
+        padding: 10px;
+        margin: auto;
+    }
+    
+    #vgCarousel{
+        display: block;
+        width: 80%;
+        padding: 10px;
+        margin: auto;
+    }
+    #bookCarousel{
+        display: block;
+        width: 80%;
+        padding: 10px;
+        margin: auto;
+    }
+    .caro-image{
+        height: 300px;
+        border-radius: 15%;
+    }
+    
+    .gen-head{
+        margin: auto;
+        text-align: center;
+    } 
+
+}
+
+
+@media only screen and (min-width: 481px){
+    #comicCarousel{
+        display: inline-block;
+        width: 45%;
+        padding: 10px;
+        margin: 0px 1%;
+    }
+    
+    #vgCarousel{
+        display: inline-block;
+        width: 45%;
+        padding: 10px;
+        margin: 0px 1%;
+    }
+    #bookCarousel{
+        display: block;
+        width: 45%;
+        padding: 10px;
+        margin: auto;
+    }
+    .caro-image{
+        height: 300px;
+        border-radius: 15%;
+    }
+    
+    .gen-head{
+        margin: auto;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #comicCarousel{
+        display: inline-block;
+        width: 30%;
+        padding: 10px;
+        margin: 0px 1%;
+    }
+    
+    #vgCarousel{
+        display: inline-block;
+        width: 30%;
+        padding: 10px;
+        margin: 0px 1%;
+    }
+    #bookCarousel{
+        display: inline-block;
+        width: 30%;
+        padding: 10px;
+        margin: 0px 1%;
+    }
+    .caro-image{
+        height: 300px;
+        border-radius: 15%;
+    }
+    
+    .gen-head{
+        margin: auto;
+        text-align: center;
+    }
+    }
+
+
+
+
+/* ~~index.html~~ */
+
+a {
+    color: black;
+}
+
+#reg{
+    display: inline-block;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+#log{
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+#alert{
+    color: red;
+    display: inline-block;
+    padding: 20px;
+}
+#welcome_board{
+    margin: auto;
+
+}
+#topic_form{
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    border: solid black 2px;
+    padding: 10px;
+}
+
+/* ~~main.html~~ */
+
+#topper{
+    margin-top: 10px;
+    background-color: white;
+    padding-bottom: 15px;
+}
+#log-cent{
+    text-align: center;
+}
+
+#logo{
+    /* text-align: center; */
+    margin: auto;
+    
+    
+}
+
+#fc{
+    display: inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* border:solid black 3px;
+    border-radius: 7px; */
+    padding: 2px;
+    margin-top: 5px;
+    font-size: 50px;
+
+}
+
+#credentials{
+    text-align: right;
+    
+}
+#logout{
+    color: black;
+
+}
+
+#main_butt{
+    text-align: center;
+    margin-bottom: 35px;
+}
+#vidcam{
+    height: 100px;
+    width: 100px;
+}
+/* ~~main-content~~ */
+
+#main{
+
+}
+
+/* ~~myaccount~~ */
+
+#updateUser{
+    margin: auto;
+    text-align: center;
+}
+
+/* ~~genre-block~~ */
+
+.gen-header{
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.gen-box{
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
+.gen-pix{
+    height: 300px;
+    max-width: 100%;
+    
+}
+
+/* ~~topic&post~~ */
+
+.main-top{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 45px;
+    width: 33%;
+}
+
+.top-pix{
+    width: 100%;
+}
+
+.cast-content{
+    margin: auto;
+    text-align: center;
+    border: solid black 2px;
+    width: 50%;
+}
+
+.post-pix{
+    width: 33%;
+    padding: 15px;
+}
