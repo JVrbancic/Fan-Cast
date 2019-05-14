@@ -43,30 +43,26 @@
                 <img src="{{topic.image.url}}" class="top-pix" alt="...">
             </div>
 
+            {% if posts.all %}
+
+            {% else %}
+                <p>There aren't any posts for this Topic yet, you should nominate one! <a  class="btn btn-dark" href="/post/{{topic.id}}">Nominate your casting!</a></p>
+            {% endif %}
+
             {% for post in posts %}
             <div class="cast-content">
                 <h3>Casting submit by <u>{{post.user.user_name}}!</u></h3>
                 <p>number of likes:{{post.liked_by.count}}</p>
-                <p>post id:{{post.id}}</p>
-                <p>liked by:{{post.liked_by.all}}</p>
+                <br>
+                <p>Actor Name:{{post.actor_name}}</p>
+
                 <img src="{{post.image.url}}" class="post-pix" alt="...">
                 <br>
-                <p>post liked_by values: {{post.liked_by.values}}</p>
 
 
-                <!-- { for liked_user in post.liked_by.values }
-                if(user.id == liked_user.id)
-                    PUT UNLIKE BUTTON
-                    else
-                    PUT LIKE BUTTON -->
-
-
-
-
-            
-                {% if user.id in post.liked_by.all %}
+                {% if user in post.liked_by.all %}
                 
-                    <a href="/like-remove/{{topic.id}}/{{post.id}}">Un-Like</a>
+                    <a class="btn btn-outline-danger" href="/like-remove/{{topic.id}}/{{post.id}}">Un-Like</a>
 
 
                 {% else %}
@@ -77,19 +73,6 @@
                         <input type="submit" value="Like">
                     </form>
                 {% endif %}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 {% if user.id == post.user.id %}
                 

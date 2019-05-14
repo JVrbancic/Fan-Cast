@@ -9,13 +9,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
+    <style>
+        body{
+            background-image: url({% static 'my_app/spotlight1.jpg' %});
+        }
+    </style>
+
+
     <title>Welcome to Fan-Cast!</title>
 </head>
 <body>
     <div id="wrapper">
         <div id="topper">        
                 <div id="credentials">
-                    <p id="top-cred">Logged in as, <u><b>{{user.user_name}}</b></u> <a id="logout" href='/logout'> <b>| logout</b></a></p>
+                    <p id="top-cred"></p>
                 </div>
     
                 <div id="log-cent">
@@ -29,7 +36,7 @@
                 </div>                            
         </div>
         <div id="welcome_board">
-            <div id="reg">
+            <div class="col-lg-5 col-sm-6" id="reg">
                     <h1>Register</h1>
                 
                     <form action="/register" method="post">
@@ -45,7 +52,7 @@
             </div>
         
 
-            <div id="log">
+            <div class="col-lg-5 col-sm-6" id="log">
                 <h1>Login</h1>
                     <form action="/login" method="post">
                         {% csrf_token %}
@@ -62,6 +69,13 @@
                 </div>    
             </div>
         </div>
+
+        <div class="bop-creds">Icons made by <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+        <br>
+        <p>Photo by tyler hendy from Pexels</p>
+        </div>
+
+
     </div>
 
     <!-- ~~JS~~ -->
