@@ -11,7 +11,7 @@
 
     <style>
         body{
-            background-image: url({% static 'my_app/cam-back.jpg' %});
+            background-image: url({% static 'my_app/spotlight1.jpg' %});
         }
     </style>
 
@@ -47,7 +47,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-interval="2000">
                         <p>
-                            <a href="/topic/{{comlast.id}}"><h3 class="gen-head">{{comlast.name}}</h3></a>
+                            <a class="gen-a" href="/topic/{{comlast.id}}"><h3 class="gen-head">{{comlast.name}}</h3></a>
                             <br>
                             uploaded by:{{comlast.user.user_name}}
         
@@ -58,7 +58,7 @@
                     {% for topic in comgen %}
                     <div class="carousel-item" data-interval="2000">
                         <p>
-                            <a href="/topic/{{topic.id}}"><h3 class="gen-head">{{topic.name}}</h3></a>
+                            <a class="gen-a" href="/topic/{{topic.id}}"><h3 class="gen-head">{{topic.name}}</h3></a>
                             <br>
                             uploaded by:{{topic.user.user_name}}
 
@@ -81,7 +81,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-interval="2000">
                         <p>
-                            <a href="/topic/{{vglast.id}}"><h3 class="gen-head">{{vglast.name}}</h3></a>
+                            <a class="gen-a" href="/topic/{{vglast.id}}"><h3 class="gen-head">{{vglast.name}}</h3></a>
                             <br>
                             uploaded by:{{vglast.user.user_name}}
             
@@ -91,7 +91,7 @@
                     {% for topic in vggen %}
                     <div class="carousel-item" data-interval="2000">
                         <p>
-                            <a href="/topic/{{topic.id}}"><h3 class="gen-head">{{topic.name}}</h3></a>
+                            <a class="gen-a" href="/topic/{{topic.id}}"><h3 class="gen-head">{{topic.name}}</h3></a>
                             <br>                            
                             uploaded by:{{topic.user.user_name}}
 
@@ -115,7 +115,7 @@
                     <div class="carousel-item active" data-interval="2000">
                         <div class="carousel-item active" data-interval="2000">
                             <p>
-                                <a href="/topic/{{bolast.id}}"><h3 class="gen-head">{{bolast.name}}</h3></a>
+                                <a class="gen-a" href="/topic/{{bolast.id}}"><h3 class="gen-head">{{bolast.name}}</h3></a>
                                 <br>
                                 uploaded by:{{bolast.user.user_name}}
                     
@@ -125,7 +125,7 @@
                     {% for topic in bogen %}
                     <div class="carousel-item" data-interval="2000">
                         <p>
-                            <a href="/topic/{{topic.id}}"><h3 class="gen-head">{{topic.name}}</h3></a>
+                            <a class="gen-a" href="/topic/{{topic.id}}"><h3 class="gen-head">{{topic.name}}</h3></a>
                             <br>
                             uploaded by:{{topic.user.user_name}}
         
